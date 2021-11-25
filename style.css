@@ -119,8 +119,8 @@
     }
     #nav li a:hover, #nav li a:focus {
       border-color: transparent;
-      background: rgba(0, 0, 0, 0.5);
-      color: #5cd;
+      
+      color: #9803fc;
       border-radius: 0;
     }
   }
