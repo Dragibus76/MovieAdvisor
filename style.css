@@ -256,34 +256,30 @@ h1 {
    height: auto;
    width: auto;
     display: flex;
-    overflow-y: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     
   }
 .fas {
   color: orange;
 }
 
-  .section {
+.section {
     margin: 10px;
     margin: auto;
     width: auto;
     height: auto;
     display: grid;
-  
-    
-    
     grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    
   }
-  .poster {
+.poster {
     margin:10px;
     width: 200px;
     height: 300px;
     background: black;
     border-radius: 10px;
-    box-shadow: 10px 10px 7px grey;
-    
-    
+    box-shadow: 10px 10px 7px grey; 
+  
   }
 .titre_section {
   padding-top: 20px;
@@ -301,12 +297,10 @@ h1 {
   
 }
 .Movie_title h2 {
-  text-align: center;
   padding-bottom: 50px;
   
 }
 .Movie_rate h2 {
-  text-align: center;
   color: black;
   margin-top: -70px;
   
@@ -325,6 +319,15 @@ h1 {
      align-items: stretch;
      align-content: center;
    }
+   .poster {
+    margin:40px;
+    width: 150px;
+    height: 200px;
+    background: black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 7px grey; 
+    overflow-x: hidden;
+  }
    
 }
 
@@ -336,7 +339,21 @@ h1 {
 }
 
 .footer_title{
-  padding-top: 5em;
+  padding-top: 2em;
   text-align: center;
   font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+.footer_icon{
+  padding-top: 1em;
+  text-align: center;
+  font-size: 2em;
+}
+
+#heart {
+padding: 10px;
+}
+
+h2{
+  text-align: center;
 }
