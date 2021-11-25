@@ -20,7 +20,9 @@
      overflow: hidden;
   }
   header {
-    background: #9803fc;
+    background-image: linear-gradient(rgba(152, 3, 252, 1), rgba(152, 3, 252,1));
+    background-size: 100%;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
@@ -28,6 +30,7 @@
      overflow: hidden;
      height: 50vh;
   }
+  
   /*********************************************
                   MENU
   *********************************************/
@@ -132,6 +135,7 @@
       color: #9803fc;
       border-radius: 0;
     }
+    
   }
  /*********************************************
                   SEARCHBAR
@@ -219,23 +223,18 @@
     margin-left: 20px;
     width: 140px;
   }
-  h1 {
-    text-align: center;
-    font-size: 10px;
-    padding: 200px 0 0;
-    font-family: 'Poppins', sans-serif;
-    animation: titre ease 3.5s;
-    
-  }
+ 
 }
 
-
-
+/*********************************************
+            SECTION HEADER
+  *********************************************/
+  
 
 h1 {
   text-align: center;
-  font-size: 4em;
-  padding: 200px 0 0 /*20%*/;
+  font-size: 3em;
+  padding: 200px 0 0;
   font-family: 'Poppins', sans-serif;
   animation: titre ease 3.5s;
   
