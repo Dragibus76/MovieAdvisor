@@ -232,7 +232,7 @@
 h1 {
   text-align: center;
   font-size: 3em;
-  padding: 200px 0 0;
+  padding: 250px 0 0;
   font-family: 'Poppins', sans-serif;
   animation: titre ease 3.5s;
 }
@@ -335,6 +335,13 @@ h1 {
     box-shadow: 10px 10px 7px grey; 
     overflow-x: hidden;
   }
+  h1 {
+    
+    padding: 100px 0 0;
+    font-size: 2em;
+    
+  }
+  
    
 }
 
