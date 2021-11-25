@@ -12,12 +12,11 @@
      
   }
   body {
-    
+    height:auto;
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
     color: #fff;
-     overflow: hidden;
   }
   header {
     background-image: linear-gradient(rgba(152, 3, 252, 1), rgba(152, 3, 252,1));
@@ -229,15 +228,12 @@
 /*********************************************
             SECTION HEADER
   *********************************************/
-  
-
 h1 {
   text-align: center;
   font-size: 3em;
   padding: 200px 0 0;
   font-family: 'Poppins', sans-serif;
   animation: titre ease 3.5s;
-  
 }
 
 @keyframes titre {
@@ -249,5 +245,64 @@ h1 {
   opacity: 1;
   transform: translate(0, 0);
 }
+}
 
+/*********************************************
+            SECTION 
+  *********************************************/
+ #test{
+   height: auto;
+    display: flex;
+    background: red;
+    overflow-y: scroll;
+  }
+
+
+  .section {
+    margin: auto;
+    width: auto;
+    height: auto;
+    background: turquoise;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+  }
+  .card {
+    margin: 20px;
+    width: 200px;
+    height: 300px;
+    background: black;
+    
+  }
+
+
+@media (max-width: 768px) {
+  .section {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: center;
+  }
+  #test{
+    height: auto;
+     background: red;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     justify-content: flex-start;
+     align-items: stretch;
+     align-content: center;
+   }
+   .card {
+    margin: 20px;
+    width: 200px;
+    height: 300px;
+    background: black;
+    
+  }
 }
