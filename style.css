@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
 /*********************************************
                   REGLAGE BASIQUE
   *********************************************/
@@ -251,46 +252,72 @@ h1 {
             SECTION 
   *********************************************/
  #test{
+   margin-top: 3em;
    height: auto;
+   width: auto;
     display: flex;
-    background: red;
     overflow-y: scroll;
+    
   }
-
+.fas {
+  color: orange;
+}
 
   .section {
+    margin: 10px;
     margin: auto;
     width: auto;
     height: auto;
-    background: turquoise;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    align-content: stretch;
+    display: grid;
+  
+    
+    
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    
   }
-  .card {
-    margin: 20px;
+  .poster {
+    margin:10px;
     width: 200px;
     height: 300px;
     background: black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 7px grey;
+    
     
   }
+.titre_section {
+  padding-top: 20px;
+  color: #9803fc;
+  text-align: center;
+}
 
-
+.Movie_title{
+  width: 200px;
+  height: 60px;
+  color: black;
+  margin:20px;
+  border-radius: 10px;
+  padding-bottom: 50px;
+  
+}
+.Movie_title h2 {
+  text-align: center;
+  padding-bottom: 50px;
+  
+}
+.Movie_rate h2 {
+  text-align: center;
+  color: black;
+  margin-top: -70px;
+  
+}
 @media (max-width: 768px) {
   .section {
-    display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-items: stretch;
-	align-content: center;
+    display: grid;
+    grid-template-columns:50% 50%;
   }
   #test{
     height: auto;
-     background: red;
      display: flex;
      flex-direction: column;
      flex-wrap: wrap;
@@ -298,11 +325,18 @@ h1 {
      align-items: stretch;
      align-content: center;
    }
-   .card {
-    margin: 20px;
-    width: 200px;
-    height: 300px;
-    background: black;
-    
-  }
+   
+}
+
+#footer{
+  margin-top: 3em;
+  width: 100%;
+  height: 10em;
+  background: #9803fc;
+}
+
+.footer_title{
+  padding-top: 5em;
+  text-align: center;
+  font-family: 'M PLUS 1 Code', sans-serif;
 }
