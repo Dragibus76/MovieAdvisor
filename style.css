@@ -172,13 +172,13 @@
     }
     #nav li a {
       color: #082138;
-      font-weight: 900;
+      font-weight: 400;
     }
     
     #nav li a:hover, #nav li a:focus {
       border-color: transparent;
       
-      color: #1BA098;
+      color: #DEB992;
       border-radius: 0;
     }
     
