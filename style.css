@@ -203,7 +203,7 @@
     border-radius: 25px;
     transition: all .5s ease-in-out;
     border-radius:30px;
-    border: 1px solid #DEB992;
+   
     padding-right: 40px;
     color:#DEB992;
     background: transparent;
@@ -244,14 +244,15 @@
     border-bottom:1px solid #DEB992;
     transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
   }
-  .fa-search {
+  .fa-search,
+  .fa-search:hover {
     color: #DEB992;
   }
 /*********************************************
             MEDIAQUERIES SEARCHBAR
   *********************************************/
   
-@media (max-width: 768px) {
+  @media  (max-width: 979px) {
   .input-search{
     width: 0px;
     margin-left: 90px;
