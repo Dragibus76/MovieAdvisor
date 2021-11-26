@@ -325,20 +325,19 @@ h1 {
     font-weight: 100;
     text-align: center;
     margin-left: auto;
-    margin-right: 90px;
+    margin-right: 80px;
+    margin-top: -70px;
     font-size: 3em;
     
     
     animation: titre ease 3.5s;
   }
-  .overlay {
-    margin: -50px;
-  }
+  
   svg{
     display: flex;
     width: 10em;
-    margin-top: 3em;
-    margin-left: 100px;
+    
+    margin-left: 130px;
     margin-right: auto;
     stroke-dasharray: 950px;
     stroke-dashoffset: 950px;
@@ -397,6 +396,7 @@ h1 {
     grid-template-columns:10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     margin-left: 100em;
   }
+  
   #test{
     
     margin-left: 10px;
