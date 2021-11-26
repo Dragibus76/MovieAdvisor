@@ -166,10 +166,15 @@
     #nav li{
       display: block;
     }
+    #nav li a {
+      color: #082138;
+
+  
+    }
     #nav li a:hover, #nav li a:focus {
       border-color: transparent;
       
-      color: #9803fc;
+      color: #1BA098;
       border-radius: 0;
     }
     
@@ -371,7 +376,7 @@ h1 {
   }
   #test{
     
-    margin-left: 100px;
+    margin-left: 10px;
     height: auto;
      display: flex;
      flex-direction: column;
