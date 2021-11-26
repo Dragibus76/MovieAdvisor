@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 /*********************************************
                   REGLAGE BASIQUE
   *********************************************/
@@ -252,7 +255,9 @@ h1 {
             SECTION 
   *********************************************/
  #test{
-   margin-top: 3em;
+   margin-top: 20px;
+   margin-bottom: -100px;
+   margin-left:20px;
    height: auto;
    width: auto;
     display: flex;
@@ -260,11 +265,7 @@ h1 {
     overflow-y: hidden;
     
   }
-.fas {
-  color: orange;
-}
-
-.section {
+  .section {
     margin: 10px;
     margin: auto;
     width: auto;
@@ -272,45 +273,28 @@ h1 {
     display: grid;
     grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
   }
-.poster {
-    margin:10px;
-    width: 200px;
-    height: 300px;
-    background: black;
-    border-radius: 10px;
-    box-shadow: 10px 10px 7px grey; 
   
+  .titre_section {
+    padding-top: 50px;
+    color: #9803fc;
+    text-align: center;
   }
-.titre_section {
-  padding-top: 20px;
-  color: #9803fc;
-  text-align: center;
+
+.fas {
+  color: orange;
 }
 
-.Movie_title{
-  width: 200px;
-  height: 60px;
-  color: black;
-  margin:20px;
-  border-radius: 10px;
-  padding-bottom: 50px;
-  
-}
-.Movie_title h2 {
-  padding-bottom: 50px;
-  
-}
-.Movie_rate h2 {
-  color: black;
-  margin-top: -70px;
-  
-}
+/*********************************************
+            MEDIAQUERIES SECTION 
+  *********************************************/
+
 @media (max-width: 768px) {
   .section {
     display: grid;
     grid-template-columns:50% 50%;
   }
   #test{
+    
     height: auto;
      display: flex;
      flex-direction: column;
@@ -318,35 +302,118 @@ h1 {
      justify-content: flex-start;
      align-items: stretch;
      align-content: center;
+     
    }
-   .card{
-     margin: -30px;
-   }
-   .poster {
-    margin-top:90px;
-    margin-left: auto;
-    margin-right: auto;
-    
-    
-    width: 150px;
-    height: 200px;
-    background: black;
-    border-radius: 10px;
-    box-shadow: 10px 10px 7px grey; 
-    overflow-x: hidden;
-  }
+   
   h1 {
-    
     padding: 100px 0 0;
     font-size: 2em;
-    
   }
-  
-   
+  .titre_section {
+    padding-top: 90px;
+    color: #9803fc;
+    text-align: center;
+  }
 }
 
+/*********************************************
+            CARDS
+  *********************************************/
+
+.card{
+  margin-right: -40px;
+ 
+  
+}
+.card img {
+  padding-top: -100px;
+  margin:0px;
+  width: 170px;
+  height: 250px;
+  background: black;
+  border-radius: 10px;
+  
+  
+}
+.Movie_title{
+  width: 200px;
+  height: 60px;
+  color: black;
+  margin:20px;
+  border-radius: 10px;
+  padding-bottom: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  
+}
+.Movie_title h2 {
+  width: 130px;
+  text-align: center;
+  
+}
+.Movie_title p{
+  width: 130px;
+  text-align: center;
+  color: orange;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+.Movie_rate {
+  height: 40px;
+  width: 40px;
+  border-radius: 30px;
+  position:relative;
+  background:#082138;
+  margin-left: 10px;
+  margin-top: -20px;
+  border: 3px solid white;
+
+  
+}
+
+.Movie_rate p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  margin-top: 9px;
+  margin-left: 4px;
+}
+.fa-star {
+  color: orange;
+}
+
+/*********************************************
+            MEDIAQUERIES CARDS
+  *********************************************/
+
+@media (max-width: 768px) {
+   .card{
+     margin-right: -40px;
+   }
+   
+  h1 {
+    padding: 100px 0 0;
+    font-size: 2em;
+  } 
+  .Movie_title{
+    
+    height: 0;
+    color: black;
+    margin:20px;
+    margin-top: -20px;
+    border-radius: 10px;
+    padding-bottom: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    
+  }
+}
+
+/*********************************************
+            FOOTER
+  *********************************************/
 #footer{
-  margin-top: 3em;
+  margin-top: 5em;
   width: 100%;
   height: 10em;
   background: #9803fc;
