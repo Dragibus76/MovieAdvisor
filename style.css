@@ -328,7 +328,11 @@ h1 {
     margin-right: 90px;
     font-size: 3em;
     
+    
     animation: titre ease 3.5s;
+  }
+  .overlay {
+    margin: -50px;
   }
   svg{
     display: flex;
