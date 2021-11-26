@@ -373,7 +373,7 @@ h1 {
   .section {
     display: grid;
     grid-template-columns:10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    margin-left: 350px;
+    margin-left: 100em;
   }
   #test{
     
@@ -399,11 +399,11 @@ h1 {
   }
 }
 
-@media all and (min-width: 769px) and (max-width: 1280px) {
+@media  (min-width: 769px) and (max-width: 1280px) {
   .section {
     display: grid;
     grid-template-columns:10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    margin-left: 270px;
+    margin-left: 70em;
   }
   #test{
     
