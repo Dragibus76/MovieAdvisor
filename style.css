@@ -326,7 +326,7 @@ h1 {
     text-align: center;
     margin-left: auto;
     margin-right: 80px;
-    margin-top: -70px;
+    margin-top: -80px;
     font-size: 3em;
     
     
@@ -336,8 +336,8 @@ h1 {
   svg{
     display: flex;
     width: 10em;
-    
-    margin-left: 130px;
+    margin-top: -20px;
+    margin-left: 100px;
     margin-right: auto;
     stroke-dasharray: 950px;
     stroke-dashoffset: 950px;
