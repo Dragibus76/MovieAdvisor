@@ -326,7 +326,7 @@ h1 {
     text-align: center;
     margin-left: auto;
     margin-right: 80px;
-    margin-top: -80px;
+    margin-top: -33px;
     font-size: 3em;
     
     
@@ -399,7 +399,7 @@ h1 {
   
   #test{
     
-    margin-left: 10px;
+    margin-left: 20px;
     height: auto;
      display: flex;
      flex-direction: column;
