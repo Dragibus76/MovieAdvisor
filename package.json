@@ -1,7 +1,7 @@
 {
-  "name": "2fa",
+  "name": "MovieAdvisor",
   "version": "1.0.0",
-  "description": "Two factor authentification with nodejs",
+  "description": "Movie Advisor",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ThalKod/node-2fa.git"
+    "url": ""
   },
   "author": "Thal Marcelin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ThalKod/node-2fa/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/ThalKod/node-2fa#readme",
+  "homepage": "",
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.19.0",
