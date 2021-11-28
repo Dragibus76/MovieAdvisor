@@ -548,12 +548,12 @@ h1 {
   
 }
 .Movie_title h2 {
-  
+  width: auto;
   text-align: center;
   
 }
 .Movie_title p{
-
+width: auto;
   text-align: center;
   color: #1BA098;
   font-family: 'Roboto', sans-serif;
