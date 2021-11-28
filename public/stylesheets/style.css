@@ -592,7 +592,8 @@ h1 {
 
 @media (max-width: 979px) {
   .card{
-   margin-right: -4em;
+   padding: 81px;
+   margin-right: -149px;
     
   }
 }
