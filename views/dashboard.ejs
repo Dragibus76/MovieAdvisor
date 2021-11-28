@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <script src="../public/js/scripts.js"></script>
     <link rel="stylesheet" href="/stylesheets/style.css">
+    
     <title>MovieAdvisor</title>
 </head>
 <header>
@@ -68,101 +69,123 @@
 </header>
 <body>
     <div class="titre_section">
-        <h2>Populaires</h2>
+        <h2>Films Populaires</h2>
       </div>
       <section id="test">
-            <div class="section">
-              <div class="card">
-                <div class="poster">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hDfk9MgZeJvR79KeapPuOgNDl27.jpg" alt="">
-              </div>
-              <div class="Movie_rate">
-                  <p>7.7 <span><i class="fas fa-star"></i></span></p>
-              </div>
-                <div class="Movie_title"><h2>Titre</h2><p>(2021)</p></div>
-              </div>
-              <div class="card">
-                <div class="poster">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rHcCQVVnHVXWKTYRW5IFrigcKX8.jpg" alt="">
-              </div>
-              <div class="Movie_rate">
-                  <p>7.7 <span><i class="fas fa-star"></i></span></p>
-              </div>
-                <div class="Movie_title"><h2>Titre</h2><p>(2021)</p></div>
-              </div>
-              <div class="card">
-                <div class="poster">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/cybZ7FoeBoBJPieKvSp4wh2yCMR.jpg" alt="">
-              </div>
-              <div class="Movie_rate">
-                  <p>7.7 <span><i class="fas fa-star"></i></span></p>
-              </div>
-                <div class="Movie_title"><h2>Titre</h2><p>(2021)</p></div>
-              </div>
-              <div class="card">
-                <div class="poster">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rZyMMYnIYWrwDXGt4uh8EIy8YAE.jpg" alt="">
-              </div>
-              <div class="Movie_rate">
-                  <p>7.7 <span><i class="fas fa-star"></i></span></p>
-              </div>
-                <div class="Movie_title"><h2>Titre</h2><p>(2021)</p></div>
-              </div>
-              <div class="card">
-                <div class="poster">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/39sz4yjMgNkbroY07lJHTNc80TZ.jpg" alt="">
-              </div>
-              <div class="Movie_rate">
-                  <p>7.7 <span><i class="fas fa-star"></i></span></p>
-              </div>
-                <div class="Movie_title"><h2>Titre</h2><p>(2021)</p></div>
-              </div>
-              <div class="card">
-                <div class="poster">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/axibOQF9QnThrr8M37ufAYurP4R.jpg" alt="">
-              </div>
-              <div class="Movie_rate">
-                  <p>7.7 <span><i class="fas fa-star"></i></span></p>
-              </div>
-                <div class="Movie_title"><h2>Titre</h2><p>(2021)</p></div>
-              </div>
-              <div class="card">
-                <div class="poster">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bLhxd4uW8OjqQtJ4N9E0eWj6rw5.jpg" alt="">
-              </div>
-              <div class="Movie_rate">
-                  <p>7.7 <span><i class="fas fa-star"></i></span></p>
-              </div>
-                <div class="Movie_title"><h2>Titre</h2><p>(2021)</p></div>
-              </div>
-              <div class="card">
-                <div class="poster">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7zMbzJijHQv5oOtkb8rdYarn9X6.jpg" alt="">
-              </div>
-              <div class="Movie_rate">
-                  <p>7.7 <span><i class="fas fa-star"></i></span></p>
-              </div>
-                <div class="Movie_title"><h2>Titre</h2><p>(2021)</p></div>
-              </div>
-              <div class="card">
-                <div class="poster">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rHcCQVVnHVXWKTYRW5IFrigcKX8.jpg" alt="">
-              </div>
-              <div class="Movie_rate">
-                  <p>7.7 <span><i class="fas fa-star"></i></span></p>
-              </div>
-                <div class="Movie_title"><h2>Titre</h2><p>(2021)</p></div>
-              </div>
-              <div class="card">
-                <div class="poster">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qKf27HFd8BuDIOX2BfymAOpEKuk.jpg" alt="">
-              </div>
-              <div class="Movie_rate">
-                  <p>7.7 <span><i class="fas fa-star"></i></span></p>
-              </div>
-                <div class="Movie_title"><h2>Titre</h2><p>(2021)</p></div>
-              </div>
-            </div>
+            
+        
+            <script>
+              const popularMovie= "https://api.themoviedb.org/3/movie/popular/?api_key=84483b5fbf72908a4d3869434376a6ba&language=fr&page=1"
+                      fetch(popularMovie)
+                      .then((res) => res.json())
+                      .then ((data) =>  {
+                      var movie = (data.results)             
+                       console.log(movie[0].title);
+                       document.querySelector("#test").innerHTML = `
+                       <div class="section">
+                          <div class="card">
+                              <div class="poster">
+                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie[0].poster_path}">
+                              </div>
+                        <div class="Movie_rate">
+                          <p>${movie[0].vote_average} <span><i class="fas fa-star"></i></span></p>
+                        </div>
+                        <div class="Movie_title"><h2>${movie[0].title}</h2><p>(${movie[0].release_date})</p></div>
+                      </div>
+
+                      <div class="card">
+                              <div class="poster">
+                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie[1].poster_path}">
+                              </div>
+                        <div class="Movie_rate">
+                          <p>${movie[1].vote_average} <span><i class="fas fa-star"></i></span></p>
+                        </div>
+                        <div class="Movie_title"><h2>${movie[1].title}</h2><p>(${movie[1].release_date})</p></div>
+                      </div>
+
+                      <div class="card">
+                              <div class="poster">
+                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie[2].poster_path}">
+                              </div>
+                        <div class="Movie_rate">
+                          <p>${movie[2].vote_average} <span><i class="fas fa-star"></i></span></p>
+                        </div>
+                        <div class="Movie_title"><h2>${movie[2].title}</h2><p>(${movie[2].release_date})</p></div>
+                      </div>
+
+                      <div class="card">
+                              <div class="poster">
+                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie[3].poster_path}">
+                              </div>
+                        <div class="Movie_rate">
+                          <p>${movie[3].vote_average} <span><i class="fas fa-star"></i></span></p>
+                        </div>
+                        <div class="Movie_title"><h2>${movie[3].title}</h2><p>(${movie[3].release_date})</p></div>
+                      </div>
+
+                      <div class="card">
+                              <div class="poster">
+                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie[4].poster_path}">
+                              </div>
+                        <div class="Movie_rate">
+                          <p>${movie[4].vote_average} <span><i class="fas fa-star"></i></span></p>
+                        </div>
+                        <div class="Movie_title"><h2>${movie[4].title}</h2><p>(${movie[4].release_date})</p></div>
+                      </div>
+
+                      <div class="card">
+                              <div class="poster">
+                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie[5].poster_path}">
+                              </div>
+                        <div class="Movie_rate">
+                          <p>${movie[5].vote_average} <span><i class="fas fa-star"></i></span></p>
+                        </div>
+                        <div class="Movie_title"><h2>${movie[5].title}</h2><p>(${movie[5].release_date})</p></div>
+                      </div>
+
+                      <div class="card">
+                              <div class="poster">
+                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie[6].poster_path}">
+                              </div>
+                        <div class="Movie_rate">
+                          <p>${movie[6].vote_average} <span><i class="fas fa-star"></i></span></p>
+                        </div>
+                        <div class="Movie_title"><h2>${movie[6].title}</h2><p>(${movie[6].release_date})</p></div>
+                      </div>
+
+                      <div class="card">
+                              <div class="poster">
+                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie[7].poster_path}">
+                              </div>
+                        <div class="Movie_rate">
+                          <p>${movie[7].vote_average} <span><i class="fas fa-star"></i></span></p>
+                        </div>
+                        <div class="Movie_title"><h2>${movie[7].title}</h2><p>(${movie[7].release_date})</p></div>
+                      </div>
+
+                      <div class="card">
+                              <div class="poster">
+                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie[8].poster_path}">
+                              </div>
+                        <div class="Movie_rate">
+                          <p>${movie[8].vote_average} <span><i class="fas fa-star"></i></span></p>
+                        </div>
+                        <div class="Movie_title"><h2>${movie[8].title}</h2><p>(${movie[8].release_date})</p></div>
+                      </div>
+
+                      <div class="card">
+                              <div class="poster">
+                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie[9].poster_path}">
+                              </div>
+                        <div class="Movie_rate">
+                          <p>${movie[9].vote_average} <span><i class="fas fa-star"></i></span></p>
+                        </div>
+                        <div class="Movie_title"><h2>${movie[9].title}</h2><p>(${movie[9].release_date})</p></div>
+                      </div>
+                        </div>
+                   `;
+})
+            </script>
       </section>
       
       <div class="titre_section">
@@ -441,6 +464,7 @@
     </div> -->
 
     <!-- Javascript -->
+    
     <script src="/js/jquery-1.11.1.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/jquery.backstretch.min.js"></script>
