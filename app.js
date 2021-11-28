@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const routes  = require("./routes/index");
 const ajax = require("./routes/ajax/index");
 const tfa = require("./routes/tfa");
-const expressSession = require("express-session");
+const expressSession = require("cookie-session");
 const passport = require("passport");
 
 const DATABASE_URL = process.env.DB;
