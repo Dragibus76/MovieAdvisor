@@ -520,7 +520,7 @@ h1 {
   *********************************************/
 
 .card{
-  margin-right: -65px;
+  margin-right: -75px;
  display: flex;
  flex-direction: column;
  align-content: space-between;
