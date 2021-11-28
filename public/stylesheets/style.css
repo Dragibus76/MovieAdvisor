@@ -433,9 +433,13 @@ h1 {
 /*********************************************
             SECTION 
   *********************************************/
- #test,
- #test2,
- #test3{
+ .mostPopularFilms,
+ .mostRatedFilms,
+ .UpcomingFilms,
+ .mostPopularTv,
+ .mostRatedTv,
+ .mostWatchedTvOnAir,
+ .mostWatchedTvOnToday{
    margin-top: 20px;
    margin-bottom: -100px;
    margin-left:20px;
@@ -487,9 +491,13 @@ h1 {
     margin-left: 100em;
   }
   
-  #test,
-  #test2,
-  #test3{
+ .mostPopularFilms,
+ .mostRatedFilms,
+ .UpcomingFilms,
+ .mostPopularTv,
+ .mostRatedTv,
+ .mostWatchedTvOnAir,
+ .mostWatchedTvOnToday{
     
     margin-left: 20px;
     height: auto;
@@ -513,7 +521,7 @@ h1 {
   .titre_section {
     margin: 70px;
     height: 40px;
-    width: 80%;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
     color: #DEB992;
@@ -530,7 +538,13 @@ h1 {
     grid-template-columns:10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     margin-left: 80em;
   }
-  #test{
+  .mostPopularFilms,
+  .mostRatedFilms,
+  .UpcomingFilms,
+  .mostPopularTv,
+  .mostRatedTv,
+  .mostWatchedTvOnAir,
+  .mostWatchedTvOnToday{
     
     height: auto;
      display: flex;
@@ -542,30 +556,7 @@ h1 {
      overflow-x: scroll;
     overflow-y: hidden;
    }
-   #test2{
-    
-    height: auto;
-     display: flex;
-     flex-direction: column;
-     flex-wrap: wrap;
-     justify-content: flex-start;
-     align-items: stretch;
-     align-content: center;
-     overflow-x: scroll;
-    overflow-y: hidden;
-   }
-   #test3{
-    
-    height: auto;
-     display: flex;
-     flex-direction: column;
-     flex-wrap: wrap;
-     justify-content: flex-start;
-     align-items: stretch;
-     align-content: center;
-     overflow-x: scroll;
-    overflow-y: hidden;
-   }
+   
    
   h1 {
     padding: 100px 0 0;
