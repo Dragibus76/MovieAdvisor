@@ -403,7 +403,7 @@ h1 {
 }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 979px) {
   #titre_site {
     color: #082138;
     font-family: 'Outfit', sans-serif;
@@ -476,7 +476,7 @@ h1 {
             MEDIAQUERIES SECTION 
   *********************************************/
 
-@media (max-width: 767px) {
+@media (max-width: 979px) {
   .section {
     display: grid;
     grid-template-columns:10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
@@ -636,7 +636,7 @@ h1 {
     
     height: 0;
     margin:20px;
-    margin-top: -20px;
+    margin-top: 10px;
     border-radius: 10px;
     padding-bottom: 50px;
     font-family: 'Poppins', sans-serif;
