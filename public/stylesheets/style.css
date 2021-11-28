@@ -375,7 +375,7 @@
 #titre_site {
   color: #082138;
   font-family: 'Outfit', sans-serif;
-  font-weight: 400;
+  font-weight: 100;
   text-align: center;
   font-size: 4em;
   padding: 0;
@@ -406,7 +406,7 @@ h1 {
 @media (max-width: 767px) {
   #titre_site {
     color: #082138;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 100;
     text-align: center;
     margin-left: auto;
