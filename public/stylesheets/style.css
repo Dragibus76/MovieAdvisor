@@ -184,6 +184,85 @@
     }
 	
   }
+  /*********************************************
+            NavBar VERTICALE
+  *********************************************/
+  
+  
+	
+  #wrap{
+    width: 100%; 
+    
+    margin: 10px;
+    z-index: 99; 
+    position: relative; 
+    
+    }
+    .navbar{
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    padding: 0;
+    margin: -27px;
+    position: absolute; 
+    }
+    .navbar li{
+    
+    width: 135.8px; 
+     
+    text-align: center; 
+    list-style: none;  
+    
+    padding: 0;
+    margin: 0;
+    
+    }
+    .navbar a{							
+    padding: 0px 0;  
+    border-left: 1px solid #ccc9c9;
+    text-decoration: none; 
+    color: white; 
+    display: block;
+    }
+    
+    .navbar li ul{
+    display: none;
+    height: auto;									
+    margin: 0; 
+    padding: 0; 
+    }				
+    .navbar li:hover ul{
+    display: block;
+    }
+    .navbar li ul li {
+    background-color: #051622;
+    } 
+    .navbar li ul li a{
+    border-left: 1px solid #444444; 
+    border-right: 1px solid #444444; 
+    border-top: 1px solid #c9d4d8; 
+    border-bottom: 1px solid #444444; 
+    }
+    .navbar li ul li a:hover{
+    background-color: #a3a1a1;
+    }
+  
+  
+    @media  (max-width: 979px) {
+      
+      .navbar{
+        margin-top: 10px;
+        font-family: 'Outfit', sans-serif;
+        font-size: 1rem;
+        padding: 0;
+        margin: 47px;
+        margin-top:5px;
+        position: absolute; 
+        text-align: center;
+        }
+        .navbar li ul li {
+          background-color: #DEB992;
+          } 
+      }
  /*********************************************
                   SEARCHBAR
   *********************************************/
@@ -606,98 +685,31 @@ h2{
   text-align: center;
 }
 
+.footer_icon p {
+  font-size: 1.5rem;
+}
 
 .top-content {
 	background: #051622;
 }
 
-/*********************************************
-            USER
-  *********************************************/
-  .user_img
-  {
-	  width: auto;
-	  height: 40px;
-	  background: #051622;
-	  border-radius: 5px;
-	  margin-left: auto;
-	  margin-right: auto;
-	  border: 1px solid #051622;
-	  color: white;
+
+@media (max-width: 768px) {
+  #footer{
+    margin-top: 5.5em;
+    
   }
-
+  .footer_title{
+    padding-bottom: 0.1em;
+    text-align: center;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    color: #082138;
+  }
+  .footer_icon{
+    padding-top: 1px;
+    text-align: center;
+    font-size: 2em;
+    color: #082138;
+  }
   
-	
-  #wrap{
-	width: 100%; 
-	
-	margin: 10px;
-	z-index: 99; 
-	position: relative; 
-	
-	}
-	.navbar{
-	font-family: 'Outfit', sans-serif;
-	font-size: 1rem;
-	padding: 0;
-	margin: -27px;
-	position: absolute; 
-	}
-	.navbar li{
-	
-	width: 135.8px; 
-	 
-	text-align: center; 
-	list-style: none;  
-	
-	padding: 0;
-	margin: 0;
-	
-	}
-	.navbar a{							
-	padding: 0px 0;  
-	border-left: 1px solid #ccc9c9;
-	text-decoration: none; 
-	color: white; 
-	display: block;
-	}
-	
-	.navbar li ul{
-	display: none;
-	height: auto;									
-	margin: 0; 
-	padding: 0; 
-	}				
-	.navbar li:hover ul{
-	display: block;
-	}
-	.navbar li ul li {
-	background-color: #051622;
-	} 
-	.navbar li ul li a{
-	border-left: 1px solid #444444; 
-	border-right: 1px solid #444444; 
-	border-top: 1px solid #c9d4d8; 
-	border-bottom: 1px solid #444444; 
-	}
-	.navbar li ul li a:hover{
-	background-color: #a3a1a1;
-	}
-
-
-	@media  (max-width: 979px) {
-		
-		.navbar{
-			margin-top: 10px;
-			font-family: 'Outfit', sans-serif;
-			font-size: 1rem;
-			padding: 0;
-			margin: 47px;
-			margin-top:5px;
-			position: absolute; 
-			text-align: center;
-			}
-			.navbar li ul li {
-				background-color: #DEB992;
-				} 
-	  }
+}
