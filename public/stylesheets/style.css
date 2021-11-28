@@ -433,7 +433,9 @@ h1 {
 /*********************************************
             SECTION 
   *********************************************/
- #test{
+ #test,
+ #test2,
+ #test3{
    margin-top: 20px;
    margin-bottom: -100px;
    margin-left:20px;
@@ -444,6 +446,7 @@ h1 {
     overflow-y: hidden;
     
   }
+  
   .section {
     
     margin: 10px;
@@ -470,6 +473,7 @@ h1 {
   }
 .titre_section h2 {
   margin-bottom: 40px;
+  width: auto;
 }
 
 /*********************************************
@@ -483,7 +487,9 @@ h1 {
     margin-left: 100em;
   }
   
-  #test{
+  #test,
+  #test2,
+  #test3{
     
     margin-left: 20px;
     height: auto;
@@ -495,7 +501,7 @@ h1 {
      align-content: center;
      
    }
-   
+  
   h1 {
     padding: 100px 0 0;
     font-size: 2em;
@@ -507,7 +513,7 @@ h1 {
   .titre_section {
     margin: 70px;
     height: 40px;
-    width: 50%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     color: #DEB992;
@@ -536,7 +542,30 @@ h1 {
      overflow-x: scroll;
     overflow-y: hidden;
    }
-   
+   #test2{
+    
+    height: auto;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     justify-content: flex-start;
+     align-items: stretch;
+     align-content: center;
+     overflow-x: scroll;
+    overflow-y: hidden;
+   }
+   #test3{
+    
+    height: auto;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     justify-content: flex-start;
+     align-items: stretch;
+     align-content: center;
+     overflow-x: scroll;
+    overflow-y: hidden;
+   }
    
   h1 {
     padding: 100px 0 0;
@@ -659,8 +688,9 @@ h1 {
             FOOTER
   *********************************************/
 #footer{
-  margin-top: 3em;
+  margin-top: 5em;
   width: auto;
+  height: auto;
  margin-right: auto;
  margin-left: auto;
   background: #DEB992;
