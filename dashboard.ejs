@@ -29,17 +29,28 @@
           <li><a href="">LES MIEUX NOTER</a></li>
           <li><a href="">PROCHAINES SORTIE</a></li>
           <li><a href="">CONTACT</a></li>
-          <!-- <li><a href="">S'ENREGISTRER</a></li> -->
-          <li><a href="/login">SE CONNECTER</a></li>
-          
           <li>
             <div class="search-box">
             <button class="btn-search"><i class="fas fa-search"></i></button>
             <input type="text" class="input-search" placeholder="Recherche...">
           </div>
           </li>
+          <li>
+            <ul class="navbar">
+              <li>
+                <a href="#"><i class="fas fa-user"></i> <%= username %></a>
+                <ul>
+                  <li><a href="#">Dashboard</a></li>
+                  <li><a href="/logout"><i class="fas fa-sign-out-alt"></i></a></li>
+                </ul>
+              </li>
+              </li>
+            </ul>
+          </li>
+          <ul>
+          </ul>
+          
         </ul>
-       
          <div class="overlay">
           <div>
             <svg class="logo"  width="500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -51,8 +62,6 @@
             </svg>
           </div>
           <h1 id="titre_site">MovieAdvisor <br> Votre Avis simplement...</h1>
-         
-            
           </div>
       
       </div>
@@ -357,8 +366,14 @@
           <i class="fab fa-facebook-square" id="heart"></i>
           <i class="fab fa-twitter-square"id="heart"></i>
           <i class="fab fa-instagram-square"id="heart"></i>
-          <i class="fab fa-github-square"id="heart"></i>
+          <i class="fab fa-github-square"id="heart"></i><br>
+          
+            <p>Bonjour <%= username %></p>
+           
          </div>
+         
+          <!-- <div class="user_img"></div> -->
+        
        <div class="footer_title">
          <p>Developper avec <i class="fas fa-heart" ></i> par Code Dragi ();<br>2021</p>
          
