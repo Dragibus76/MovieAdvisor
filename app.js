@@ -10,7 +10,7 @@ const expressSession = require("cookie-session");
 const passport = require("passport");
 
 const DATABASE_URL = process.env.DB;
-const PORT = "3000";
+const PORT = process.env.PORT;
 
 // Configure app
 app.set("view engine", "ejs");
