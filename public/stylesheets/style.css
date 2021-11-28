@@ -537,7 +537,8 @@ h1 {
   border-radius: 10px;
 }
 .Movie_title{
-  width: 200px;
+  
+  width: auto;
   height: 100px;
   color: #DEB992;
   margin:20px;
@@ -548,12 +549,12 @@ h1 {
   
 }
 .Movie_title h2 {
-  width: auto;
+  margin-left: 20px;
   text-align: center;
   
 }
 .Movie_title p{
-width: auto;
+
   text-align: center;
   color: #1BA098;
   font-family: 'Roboto', sans-serif;
