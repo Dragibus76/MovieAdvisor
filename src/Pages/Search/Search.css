@@ -1,0 +1,16 @@
+.search {
+  display: flex;
+  margin: 15px 0;
+}
+
+.MuiButton-contained {
+  background: transparent!important;
+  border: 1px solid #DEB890!important;
+  color: #DEB890!important;
+  transition: 1s ease!important;
+  margin-left: 20px!important;
+}
+
+.MuiButton-contained:hover {
+  transform: scale(1.2)!important;
+}
