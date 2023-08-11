@@ -1,10 +1,11 @@
+// components/Home.js
 import React from 'react';
 
 const Movies = () => {
   return (
     <div>
-      <h1>Films</h1>
-      <p>Ceci est la page films</p>
+      <h1>Movies</h1>
+      <p>This is the movie page </p>
     </div>
   );
 };
