@@ -3,7 +3,7 @@
 	margin: auto;
 	margin-top: 100px;
 	border-radius: 10px;
-	height: 540px;
+	height: 560px;
 	width: 300px;
 	background: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -43,12 +43,12 @@ h6 {
 	margin-top: 15px;
 	font-size: 1em;
 	font-family: sans-serif;
-	max-width: 180px; /* Ajoutez cette ligne */
+	max-width: 160px; /* Ajoutez cette ligne */
 }
 
 .ratingContainer {
 	margin-left: 130px;
-	margin-top: 50px;
+	margin-top: 70px;
     font-size: 20px;
 	color: gold;
 }

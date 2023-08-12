@@ -30,7 +30,7 @@ const CarouselComponent = ({ fetchData }) => {
         <div key={index} className="carousel-slide">
           <img src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`} alt={`Item ${index + 1}`} />
           <div className="carousel-content">
-            <h3 className="carousel-title">{item.title}</h3>
+            <h3 className="carousel-title">{item.title || item.original_name}</h3>
             <p className="carousel-overview">{item.overview}</p>
           </div>
         </div>

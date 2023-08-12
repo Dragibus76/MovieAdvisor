@@ -71,11 +71,24 @@ const MovieSearch = ( page, query ) => {
   return fetchMovieData(`https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=fr-FR&page=${page}`, options);
 };
 
+//TV SHOW
+const fetchPopularTvShows = (page) => {
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: config.Authorization,
+    },
+  };
+
+  return fetchMovieData(`https://api.themoviedb.org/3/tv/top_rated?language=fr-FR&page=${page}`, options);
+};
 export {
   fetchMoviePopular,
   fetchMovieTopRated,
   fetchMovieUpcoming,
   fetchMovieNowPlaying,
   MovieSearch,
+  fetchPopularTvShows
  
 };

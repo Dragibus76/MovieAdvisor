@@ -4,6 +4,8 @@ import Pagination from '../components/PaginationComponent';
 import { getFetchFunction } from '../utils/FilterCategory';
 import CustomButtonCategory from '../components/CustomButtonCategory';
 import SearchBar from '../components/SearchBar';
+import CarouselComponent from '../components/CarouselComponent';
+import { fetchMovieNowPlaying } from '../api/ApiCalls';
 import '../styles/pages/Movies.css';
 
 const Movies = () => {
@@ -51,6 +53,7 @@ const Movies = () => {
 
   return (
     <div>
+      <CarouselComponent fetchData={fetchMovieNowPlaying} />
       <div className='MoviesContainer'>
         {buttonInfo.map(button => (
           <CustomButtonCategory
