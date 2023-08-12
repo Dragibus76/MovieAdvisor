@@ -1,8 +1,8 @@
 import React from 'react';
-import CardComponent from '../components/CardComponent';
-import '../styles/MovieList.css'; 
+import CardComponent from './CardComponent';
+import '../styles/components/CardList.css'; 
 
-const MovieList = ({ movies }) => {
+const CardList = ({ movies }) => {
   return (
     <div className="card-list">
       {movies.map((movie, index) => (
@@ -20,4 +20,4 @@ const MovieList = ({ movies }) => {
   );
 };
 
-export default MovieList;
+export default CardList;

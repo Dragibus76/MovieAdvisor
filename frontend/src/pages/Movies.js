@@ -1,5 +1,5 @@
 import React from 'react';
-import MovieList from '../components/MovieList';
+import CardList from '../components/CardList';
 
 const moviesData = [
   {
@@ -52,7 +52,7 @@ const Movies = () => {
     <div>
       <h1>Movies</h1>
       <p>This is the movie page</p>
-      <MovieList movies={moviesData} />
+      <CardList movies={moviesData} />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineHeart } from 'react-icons/ai';
 import renderStars from '../utils/starUtils';
-import '../styles/Card.css';
+import '../styles/components/CardComponent.css';
 
 
 
