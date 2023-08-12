@@ -1,4 +1,3 @@
-
 .CardContainer {
 	display: block;
 	margin: auto;
@@ -44,11 +43,12 @@ h6 {
 	margin-top: 15px;
 	font-size: 1em;
 	font-family: sans-serif;
+	max-width: 180px; /* Ajoutez cette ligne */
 }
 
 .ratingContainer {
 	margin-left: 130px;
-	margin-top: 45px;
+	margin-top: 50px;
     font-size: 20px;
 }
 

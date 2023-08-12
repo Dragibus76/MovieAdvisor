@@ -1,11 +1,12 @@
 import React from 'react';
 import { AiOutlineHeart } from 'react-icons/ai';
 import renderStars from '../utils/starUtils';
+import getCountryFlag from '../utils/CountryFlags';
 import '../styles/components/CardComponent.css';
 
+const CardComponent = ({ title, coverImage, release_date, original_language, vote_average, numReviews }) => {
+  const countryFlag = getCountryFlag(original_language);
 
-
-const CardComponent = ({ title, coverImage, year, country, rating, numReviews }) => {
   return (
     <div className="CardContainer">
       <img src={coverImage} className="backimg" />
@@ -13,21 +14,21 @@ const CardComponent = ({ title, coverImage, year, country, rating, numReviews })
       <AiOutlineHeart className='likeIcon' />
       <h6>{title}</h6>
       <div className='ratingContainer'>
-        {renderStars(parseFloat(rating))}
+      {renderStars(vote_average / 2)}
       </div>
 
       <div className="head1">
         <p>Année</p>
+        <p>Note</p>
+        <p>Vote</p>
         <p>Pays</p>
-        <p>Rating</p>
-        <p>Avis</p>
       </div>
       
       <div className="head2">
-        <p>{year}</p>
-        <p>{country}</p>
-        <p>{rating}</p>
+        <p>{release_date}</p>
+        <p>{vote_average}</p>
         <p>{numReviews}</p>
+        <p>{countryFlag}</p> {/* Afficher l'emoji du drapeau */}
       </div>
     </div>
   );

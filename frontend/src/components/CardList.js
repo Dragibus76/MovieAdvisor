@@ -9,11 +9,11 @@ const CardList = ({ movies }) => {
         <CardComponent
           key={index}
           title={movie.title}
-          coverImage={movie.coverImage}
-          year={movie.year}
-          country={movie.country}
-          rating={movie.rating}
-          numReviews={movie.numReviews}
+          coverImage={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${movie.poster_path}`}
+          release_date={movie.release_date.split('-')[0]}
+          original_language={movie.original_language}
+          vote_average={movie.vote_average.toString()}
+          numReviews={movie.vote_count.toString()}
         />
       ))}
     </div>

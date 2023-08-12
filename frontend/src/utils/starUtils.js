@@ -1,9 +1,9 @@
 import React from 'react';
 import { BsStarHalf, BsStar, BsStarFill } from 'react-icons/bs';
 
-const renderStars = (rating) => {
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating - fullStars >= 0.5;
+const renderStars = (vote_average) => {
+    const fullStars = Math.floor(vote_average);
+    const hasHalfStar = vote_average - fullStars >= 0.5;
     const stars = [];
 
     for (let i = 0; i < fullStars; i++) {
