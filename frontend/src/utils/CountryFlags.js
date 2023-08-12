@@ -20,6 +20,10 @@ const getCountryFlag = (languageCode) => {
       return '🇷🇺'; // Russie
     case 'uk':
       return '🇺🇦'; // Ukraine
+    case 'tl':
+      return '🇵🇭'; // Philippines
+      case 'pl':
+      return '🇵🇱'; // Pologne
     default:
       return ''; 
   }

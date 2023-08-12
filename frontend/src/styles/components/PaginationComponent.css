@@ -1,0 +1,21 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.PaginationButton {
+    background-color: white;
+    color: #720e9e;
+    border: 2px solid #720e9e;
+    border-radius: 5px;
+    margin: 0 5px; 
+    padding: 5px;
+    transition:  0.5s ease;
+}
+
+.PaginationButton:hover {
+    background-color: #720e9e;
+    color: white;
+}

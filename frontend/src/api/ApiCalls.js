@@ -7,55 +7,55 @@ const fetchMovieData = (url, options) => {
 };
 
 // FETCH MOVIE POPULAR
-const fetchMoviePopular = () => {
+const fetchMoviePopular = (page) => {
   const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: config.Authorization
-    }
+      Authorization: config.Authorization,
+    },
   };
 
-  return fetchMovieData('https://api.themoviedb.org/3/movie/popular?language=fr-FR&page=1', options);
+  return fetchMovieData(`https://api.themoviedb.org/3/movie/popular?language=fr-FR&page=${page}`, options);
 };
 
 // FETCH MOVIE TOP RATED
-const fetchMovieTopRated = () => {
+const fetchMovieTopRated = (page) => {
   const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: config.Authorization
-    }
+      Authorization: config.Authorization,
+    },
   };
 
-  return fetchMovieData('https://api.themoviedb.org/3/movie/top_rated?language=fr-FR&page=1', options);
+  return fetchMovieData(`https://api.themoviedb.org/3/movie/top_rated?language=fr-FR&page=${page}`, options);
 };
 
 // FETCH MOVIE UPCOMING
-const fetchMovieUpcoming = () => {
+const fetchMovieUpcoming = (page) => {
   const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: config.Authorization
-    }
+      Authorization: config.Authorization,
+    },
   };
 
-  return fetchMovieData('https://api.themoviedb.org/3/movie/upcoming?language=fr-FR&page=1', options);
+  return fetchMovieData(`https://api.themoviedb.org/3/movie/upcoming?language=fr-FR&page=${page}`, options);
 };
 
 // FETCH MOVIE NOW PLAYING
-const fetchMovieNowPlaying = () => {
+const fetchMovieNowPlaying = (page) => {
   const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: config.Authorization
-    }
+      Authorization: config.Authorization,
+    },
   };
 
-  return fetchMovieData('https://api.themoviedb.org/3/movie/now_playing?language=fr-FR&page=1', options);
+  return fetchMovieData(`https://api.themoviedb.org/3/movie/now_playing?language=fr-FR&page=${page}`, options);
 };
 
 export {

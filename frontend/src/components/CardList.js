@@ -1,8 +1,9 @@
 import React from 'react';
 import CardComponent from './CardComponent';
-import '../styles/components/CardList.css'; 
+import '../styles/components/CardList.css';
 
 const CardList = ({ movies }) => {
+
   return (
     <div className="card-list">
       {movies.map((movie, index) => (
