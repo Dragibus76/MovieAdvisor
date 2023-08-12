@@ -30,7 +30,7 @@
     font-size: 20px;
     position: absolute;
 	margin-top: 340px;
-	background: #dc2c29;
+	background: #720e9e;
 	color: white;
 	border-radius: 50px;
 	padding: 5px;
@@ -50,6 +50,7 @@ h6 {
 	margin-left: 130px;
 	margin-top: 50px;
     font-size: 20px;
+	color: gold;
 }
 
 .head1 {

@@ -1,5 +1,43 @@
-.carousel .slide .legend {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    font-weight: 600;
+.carousel-slide {
+  position: relative;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  font-size: 16px;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.carousel-overview {
+  margin: 10px 0 0;
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+  .carousel-content {
+    font-size: 14px;
+    padding: 10px;
   }
+
+  .carousel-title {
+    font-size: 20px;
+  }
+}

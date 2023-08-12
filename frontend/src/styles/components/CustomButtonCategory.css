@@ -3,8 +3,9 @@
     border: 2px solid #720e9e;
     border-radius: 5px;
     margin: 5px;
-    padding: 5px 10px;
+    padding: 5px;
     cursor: pointer;
+    color: #720e9e;
   }
   
   .custom-button.active {

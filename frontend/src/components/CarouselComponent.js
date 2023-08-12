@@ -3,33 +3,18 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../styles/components/CarouselComponent.css';
 
-const CarouselComponent = () => {
+const CarouselComponent = ({ fetchData }) => {
   const carouselRef = useRef(null);
-  const [imageLinks, setImageLinks] = useState([]);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const handleOnSelect = (index, item) => {
-    if (index === item.length - 1) {
-      carouselRef.current.select(0);
-    }
-  };
+  const [items, setItems] = useState([]);
+  const [currentItemIndex, setCurrentItemIndex] = useState(0);
 
   useEffect(() => {
-    const handleWindowSizeChange = () => {
-      const isDesktop = window.innerWidth > 768;
-      const links = isDesktop
-        ? ['https://picsum.photos/800/300', 'https://picsum.photos/800/300', 'https://picsum.photos/800/300', 'https://picsum.photos/800/300']
-        : ['https://picsum.photos/800/400', 'https://picsum.photos/800/400', 'https://picsum.photos/800/400', 'https://picsum.photos/800/400'];
-
-      setImageLinks(links);
-    };
-
-    handleWindowSizeChange();
-    window.addEventListener('resize', handleWindowSizeChange);
-    return () => {
-      window.removeEventListener('resize', handleWindowSizeChange);
-    };
-  }, []);
+    fetchData()
+      .then(response => {
+        setItems(response.results.slice(0, 6));
+      })
+      .catch(error => console.error(error));
+  }, [fetchData]);
 
   return (
     <Carousel
@@ -37,14 +22,17 @@ const CarouselComponent = () => {
       showStatus={false}
       autoPlay
       infiniteLoop
-      selectedItem={currentImageIndex}
-      onSelect={(index, item) => setCurrentImageIndex(index)}
+      selectedItem={currentItemIndex}
+      onSelect={(index, item) => setCurrentItemIndex(index)}
       ref={carouselRef}
     >
-      {imageLinks.map((link, index) => (
-        <div key={index}>
-          <img src={link} alt={`Placeholder ${index + 1}`} />
-          <p className="legend">Légende de l'image {index + 1}</p>
+      {items.map((item, index) => (
+        <div key={index} className="carousel-slide">
+          <img src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`} alt={`Item ${index + 1}`} />
+          <div className="carousel-content">
+            <h3 className="carousel-title">{item.title}</h3>
+            <p className="carousel-overview">{item.overview}</p>
+          </div>
         </div>
       ))}
     </Carousel>

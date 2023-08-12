@@ -76,5 +76,6 @@ export {
   fetchMovieTopRated,
   fetchMovieUpcoming,
   fetchMovieNowPlaying,
-  MovieSearch
+  MovieSearch,
+ 
 };

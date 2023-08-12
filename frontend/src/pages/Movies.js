@@ -3,7 +3,7 @@ import CardList from '../components/CardList';
 import Pagination from '../components/PaginationComponent';
 import { getFetchFunction } from '../utils/FilterCategory';
 import CustomButtonCategory from '../components/CustomButtonCategory';
-import { MovieSearch } from '../api/ApiCalls';
+import SearchBar from '../components/SearchBar';
 import '../styles/pages/Movies.css';
 
 const Movies = () => {
@@ -11,15 +11,16 @@ const Movies = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalMovies, setTotalMovies] = useState(0);
   const [activeButton, setActiveButton] = useState('popular');
-  const [searchQuery, setSearchQuery] = useState('');
 
   const moviesPerPage = 20;
+
   useEffect(() => {
     const fetchFunction = getFetchFunction(activeButton);
 
     fetchFunction(currentPage)
       .then(response => {
-        setMoviesData(response.results);
+        const moviesWithImages = response.results.filter(movie => movie.poster_path !== null);
+        setMoviesData(moviesWithImages);
         setTotalMovies(response.total_results);
       })
       .catch(error => console.error(error));
@@ -34,17 +35,11 @@ const Movies = () => {
     setCurrentPage(1);
   };
 
-  const handleSearchSubmit = (e) => {
-    e.preventDefault();
-
-    if (searchQuery.trim() !== '') {
-      MovieSearch(currentPage, searchQuery)
-        .then(response => {
-          setMoviesData(response.results);
-          setTotalMovies(response.total_results);
-        })
-        .catch(error => console.error(error));
-    }
+  const handleSearchResult = (searchResults, totalResults) => {
+    const searchResultsWithImages = searchResults.filter(movie => movie.poster_path !== null);
+    setMoviesData(searchResultsWithImages);
+    setTotalMovies(totalResults);
+    setCurrentPage(1);
   };
 
   const buttonInfo = [
@@ -56,7 +51,6 @@ const Movies = () => {
 
   return (
     <div>
-      <h1>Movies</h1>
       <div className='MoviesContainer'>
         {buttonInfo.map(button => (
           <CustomButtonCategory
@@ -67,18 +61,7 @@ const Movies = () => {
           />
         ))}
       </div>
-      <div className="search-bar">
-        <form onSubmit={handleSearchSubmit}>
-          <input
-            type="text"
-            placeholder="Rechercher un film..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          <button type="submit">Rechercher</button>
-        </form>
-      </div>
-      <p>This is the movie page</p>
+      <SearchBar onSearch={handleSearchResult} />
       <CardList movies={moviesData} />
       <Pagination currentPage={currentPage} moviesPerPage={moviesPerPage} totalMovies={totalMovies} onPageChange={handlePageChange} />
     </div>
