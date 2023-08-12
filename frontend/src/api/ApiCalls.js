@@ -58,9 +58,23 @@ const fetchMovieNowPlaying = (page) => {
   return fetchMovieData(`https://api.themoviedb.org/3/movie/now_playing?language=fr-FR&page=${page}`, options);
 };
 
+// MOVIE SEARCH
+const MovieSearch = ( page, query ) => {
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: config.Authorization,
+    },
+  };
+
+  return fetchMovieData(`https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=fr-FR&page=${page}`, options);
+};
+
 export {
   fetchMoviePopular,
   fetchMovieTopRated,
   fetchMovieUpcoming,
-  fetchMovieNowPlaying
+  fetchMovieNowPlaying,
+  MovieSearch
 };

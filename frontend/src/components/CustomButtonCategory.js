@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/components/CustomButtonCategory.css';
 
 const CustomButtonCategory = ({ label, isActive, onClick }) => {
   return (
