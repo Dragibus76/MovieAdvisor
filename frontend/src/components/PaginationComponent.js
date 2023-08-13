@@ -1,21 +1,13 @@
 import React from 'react';
 import '../styles/components/PaginationComponent.css';
 
-const Pagination = ({ currentPage, moviesPerPage, totalMovies, onPageChange }) => {
-  const totalPages = Math.ceil(totalMovies / moviesPerPage);
-
-  const handlePageChange = (page) => {
-    if (page >= 1 && page <= totalPages) {
-      onPageChange(page);
-    }
-  };
-
+const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   return (
     <div className="pagination">
-      <button  className='PaginationButton' onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
-        Précedent
+      <button className='PaginationButton' onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1}>
+        Précédent
       </button>
-      <button className='PaginationButton' onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
+      <button className='PaginationButton' onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages}>
         Suivant
       </button>
     </div>

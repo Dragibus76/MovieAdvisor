@@ -47,7 +47,7 @@ const MediaPage = ({ fetchData, mediaType, searchFunction }) => {
     { key: `${mediaType}Popular`, label: 'Les Plus Populaires' },
     { key: `${mediaType}TopRated`, label: 'Les Mieux Notés' },
     { key: `${mediaType}Upcoming`, label: 'Prochaines Sorties' },
-    { key: `${mediaType}NowPlaying`, label: 'Enc ce Moment' },
+    { key: `${mediaType}NowPlaying`, label: 'En ce Moment' },
   ];
 
   return (
@@ -65,7 +65,7 @@ const MediaPage = ({ fetchData, mediaType, searchFunction }) => {
       </div>
       <SearchBar onSearch={(results, totalResults) => handleSearchResult(results, totalResults)} searchFunction={searchFunction} />
       {mediaData && <MediaList mediaItems={mediaData} />}
-      <Pagination currentPage={currentPage} mediaPerPage={mediaPerPage} totalMedia={totalMedia} onPageChange={handlePageChange} />
+      <Pagination currentPage={currentPage} totalPages={Math.ceil(totalMedia / mediaPerPage)} onPageChange={handlePageChange} />
     </div>
   );
 };
