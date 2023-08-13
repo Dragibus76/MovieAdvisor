@@ -1,13 +1,12 @@
 import React from 'react';
-import CarouselComponent from '../components/CarouselComponent';
-import { fetchPopularTvShows } from '../api/ApiCalls';
+import MediaPage from '../components/MediaPage';
+import { fetchPopularTvShow } from '../api/ApiCalls';
 
 const TvSeries = () => {
   return (
     <div>
-      <h1>TvSeries</h1>
-      <p>This is the TvSeries page </p>
-      <CarouselComponent fetchData={fetchPopularTvShows} />
+      <h1>Séries TV</h1>
+      <MediaPage mediaType="Tv" fetchData={fetchPopularTvShow} />
     </div>
   );
 };

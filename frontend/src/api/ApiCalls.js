@@ -72,7 +72,7 @@ const MovieSearch = ( page, query ) => {
 };
 
 //TV SHOW
-const fetchPopularTvShows = (page) => {
+const fetchTopRatedTvShow = (page) => {
   const options = {
     method: 'GET',
     headers: {
@@ -83,12 +83,53 @@ const fetchPopularTvShows = (page) => {
 
   return fetchMovieData(`https://api.themoviedb.org/3/tv/top_rated?language=fr-FR&page=${page}`, options);
 };
+
+const fetchPopularTvShow = (page) => {
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: config.Authorization,
+    },
+  };
+
+  return fetchMovieData(`https://api.themoviedb.org/3/tv/popular?language=fr-FR&page=${page}`, options);
+};
+
+const fetchUpcomingTvShow = (page) => {
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: config.Authorization,
+    },
+  };
+
+  return fetchMovieData(`https://api.themoviedb.org/3/tv/on_the_air?language=fr-FR&page=${page}`, options);
+};
+
+const fetchNowPlayingTvShow = (page) => {
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: config.Authorization,
+    },
+  };
+
+  return fetchMovieData(`https://api.themoviedb.org/3/tv/airing_today?language=fr-FR&page=${page}`, options);
+};
+
+
 export {
   fetchMoviePopular,
   fetchMovieTopRated,
   fetchMovieUpcoming,
   fetchMovieNowPlaying,
   MovieSearch,
-  fetchPopularTvShows
+  fetchTopRatedTvShow,
+  fetchPopularTvShow,
+  fetchUpcomingTvShow,
+  fetchNowPlayingTvShow
  
 };

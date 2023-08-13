@@ -13,10 +13,10 @@ const Pagination = ({ currentPage, moviesPerPage, totalMovies, onPageChange }) =
   return (
     <div className="pagination">
       <button  className='PaginationButton' onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
-        Previous
+        Précedent
       </button>
       <button className='PaginationButton' onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
-        Next
+        Suivant
       </button>
     </div>
   );

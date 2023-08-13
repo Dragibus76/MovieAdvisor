@@ -2,9 +2,9 @@ import React from 'react';
 import { AiOutlineHeart } from 'react-icons/ai';
 import renderStars from '../utils/starUtils';
 import getCountryFlag from '../utils/CountryFlags';
-import '../styles/components/CardComponent.css';
+import '../styles/components/MediaCardComponent.css';
 
-const CardComponent = ({ title, coverImage, release_date, original_language, vote_average, numReviews }) => {
+const MediaCardComponent = ({ title, coverImage, release_date, original_language, vote_average, numReviews }) => {
   const countryFlag = getCountryFlag(original_language);
 
   return (
@@ -34,4 +34,4 @@ const CardComponent = ({ title, coverImage, release_date, original_language, vot
   );
 };
 
-export default CardComponent;
+export default MediaCardComponent;
