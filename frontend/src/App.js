@@ -5,6 +5,7 @@ import TvSeries from "./pages/TvSeries";
 import ErrorPage from "./pages/ErrorPage";
 import Navbar from "./components/Navbar";
 import './styles/App.css';
+import MediaDetailsPage from "./pages/MediaDetailsPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/films" element={<Movies />} />
         <Route path="/series" element={<TvSeries />} />
+        <Route path="/details/:id" element={<MediaDetailsPage/>} />
         <Route path="*" element={<ErrorPage />} />
     </Routes>
   </BrowserRouter>
