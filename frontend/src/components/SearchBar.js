@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { MovieSearch } from '../api/ApiCalls';
+import { FaSearch } from 'react-icons/fa';
 import '../styles/components/SearchBar.css';
-import { FaSearch } from 'react-icons/fa'; // Import de l'icône de loupe
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch, searchFunction }) => {
   const [searchQuery, setSearchQuery] = useState('');
+
   const handleSearch = () => {
     if (searchQuery.trim() !== '') {
-      MovieSearch(1, searchQuery)
+      searchFunction(1, searchQuery)
         .then(response => {
           onSearch(response.results, response.total_results);
         })
@@ -29,10 +29,10 @@ const SearchBar = ({ onSearch }) => {
           className="SearchInput"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Rechercher un Film ..."
-          onKeyPress={handleKeyPress} // Appeler la recherche quand on appuie sur "Enter"
+          placeholder="Rechercher..."
+          onKeyPress={handleKeyPress}
         />
-        <FaSearch className="SearchIcon" onClick={handleSearch} /> {/* Icône de loupe */}
+        <FaSearch className="SearchIcon" onClick={handleSearch} />
       </div>
     </div>
   );

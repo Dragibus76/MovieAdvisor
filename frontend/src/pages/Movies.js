@@ -1,13 +1,12 @@
 import React from 'react';
 import MediaPage from '../components/MediaPage';
-import { fetchMovieNowPlaying } from '../api/ApiCalls';
-
+import { fetchMovieNowPlaying, MovieSearch } from '../api/ApiCalls';
 
 const Movies = () => {
   return (
     <div>
       <h1>Films</h1>
-      <MediaPage mediaType="Movie" fetchData={fetchMovieNowPlaying} />
+      <MediaPage fetchData={fetchMovieNowPlaying} mediaType="Movie" searchFunction={MovieSearch} />
     </div>
   );
 };

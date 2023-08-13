@@ -7,7 +7,7 @@ import SearchBar from '../components/SearchBar';
 import CarouselComponent from '../components/CarouselComponent';
 import '../styles/components/MediaPage.css';
 
-const MediaPage = ({ fetchData, mediaType }) => {
+const MediaPage = ({ fetchData, mediaType, searchFunction }) => {
   const [mediaData, setMediaData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalMedia, setTotalMedia] = useState(0);
@@ -63,7 +63,7 @@ const MediaPage = ({ fetchData, mediaType }) => {
           />
         ))}
       </div>
-      <SearchBar onSearch={handleSearchResult} />
+      <SearchBar onSearch={(results, totalResults) => handleSearchResult(results, totalResults)} searchFunction={searchFunction} />
       {mediaData && <MediaList mediaItems={mediaData} />}
       <Pagination currentPage={currentPage} mediaPerPage={mediaPerPage} totalMedia={totalMedia} onPageChange={handlePageChange} />
     </div>
