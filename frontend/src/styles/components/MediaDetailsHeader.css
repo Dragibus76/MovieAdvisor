@@ -1,14 +1,13 @@
-/* MediaDetailsPage.css */
 .media-details-container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh; 
   overflow: hidden;
 }
 
 .backdrop {
   width: 100%;
-  height: 550px;
+  min-height: 650px; 
   background-size: cover;
   background-position: center;
   position: relative;
@@ -21,14 +20,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(200, 200, 200, 0.5); /* Fond gris clair avec opacité */
+  background-color: rgba(200, 200, 200, 0.5);
 }
 
 .poster {
   position: absolute;
   top: 20px;
   left: 20px;
-  width: 300px; /* Ajustez la taille du poster selon vos besoins */
+  width: 325px; 
   z-index: 1;
 }
 
@@ -39,8 +38,9 @@
 .info {
   position: absolute;
   top: 20px;
-  left: 350px; /* Marge du poster plus 20px */
+  left: 370px; 
   z-index: 1;
+  word-wrap: break-word;
 }
 
 .info h2 {
@@ -52,12 +52,14 @@
 .info p {
   font-size: 16px;
   margin-bottom: 10px;
+  padding: 10px;
 }
 
 .release-year {
   font-weight: 500;
   font-size: 80%;
   margin-left: 5px;
+  word-wrap: break-word;
 }
 
 .spinner-container {
@@ -90,20 +92,19 @@
 
 .dot-icon {
   vertical-align: middle;
-  margin: 0; /* Ajustez la marge selon vos besoins */
+  margin: 0; 
   font-size: 1.3rem;
 }
 
 .user-rating {
-  display: flex; /* Utilisez flexbox pour aligner les éléments sur la même ligne */
-  align-items: center; /* Aligner les éléments verticalement au centre */
+  display: flex; 
+  align-items: center; 
   margin-top: 10px;
 }
 
-
 .icons {
   display: flex;
-  align-items: center; /* Aligner les icônes verticalement au centre */
+  align-items: center; 
   margin: 10px;
 }
 
@@ -119,19 +120,23 @@
   margin-bottom: 10px;
 }
 
-.icon-heart, .icon-play {
+.icon-heart,
+.icon-play {
   color: #062441;
   cursor: pointer;
 }
+
 .icon-heart {
   font-size: 14px;
 }
+
 .icon-play {
   font-size: 20px;
 }
+
 .progress-circle {
   display: flex;
-  align-items: center; /* Aligner les éléments verticalement au centre */
+  align-items: center; 
   margin-right: 10px;
 }
 
@@ -151,7 +156,10 @@
   }
 }
 
-/* Ajoutez ces styles dans votre fichier CSS */
+.synopsis {
+  max-height: 60vh; 
+  overflow-y: auto;
+}
 
 .overlay {
   position: fixed;
@@ -179,4 +187,64 @@
   font-size: 20px;
   cursor: pointer;
   color: white;
+}
+
+.synopsis-button {
+  background-color: #062441;
+  color: white;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.synopsis-button:hover {
+  background-color: #0e3b6e;
+}
+
+.close-button-synopsis{
+  font-size: 25px;
+}
+
+.close-button-synopsis:hover {
+color: red;
+}
+
+@media (max-width: 768px) {
+  .backdrop {
+    height: 500px; 
+  }
+
+  .poster {
+    position: absolute; 
+    left: 20px;
+    width: 25vh; 
+    margin: 0 auto; 
+  }
+
+  .info {
+    position: static; 
+    margin-top: 10px; 
+    width: 100%; 
+    padding: 10px;
+    word-wrap: break-word;
+  }
+
+  .backdrop::before {
+    background-color: rgba(200,200,200,0.3); 
+  }
+
+  .genres {
+    width: 100%;
+    padding: 10px;
+    word-wrap: break-word;
+  }
+
+  .duration,
+  .release-date {
+    font-size: 11px;
+  }
 }

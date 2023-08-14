@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import {
-  fetchMediaDetails,
-  fetchTvShowDetails,
-  fetchCredits,
-  fetchVideos,
-} from "../api/ApiCalls";
+import { fetchMediaDetails, fetchCredits, fetchVideos } from "../api/ApiCalls";
 import { BsDot, BsHeartFill, BsPlayFill } from "react-icons/bs";
 import { FaSpinner } from "react-icons/fa";
-import "react-circular-progressbar/dist/styles.css";
-import dateFormater from "../utils/dateFormater";
-import "../styles/components/MediaDetailsHeader.css";
+import { AiFillCloseCircle } from 'react-icons/ai'
 import CustomCircularProgressbar from "../components/CustomCircularProgressbar";
+import dateFormater from "../utils/dateFormater";
+import "react-circular-progressbar/dist/styles.css";
+import "../styles/components/MediaDetailsHeader.css";
 
 const MediaDetailsHeader = () => {
   const { id } = useParams();
@@ -19,9 +15,11 @@ const MediaDetailsHeader = () => {
   const isMoviePage = window.location.pathname.includes("/movie");
   const [showTrailer, setShowTrailer] = useState(false);
   const [trailerUrl, setTrailerUrl] = useState("");
+  const [showFullSynopsis, setShowFullSynopsis] = useState(false);
+
 
   useEffect(() => {
-    const fetchDetails = isMoviePage ? fetchMediaDetails : fetchTvShowDetails;
+    const fetchDetails = isMoviePage ? fetchMediaDetails : fetchMediaDetails; // Utilisez fetchMediaDetails pour les deux cas
     const fetchCreditDetails = fetchCredits;
 
     Promise.all([
@@ -54,12 +52,6 @@ const MediaDetailsHeader = () => {
   const genres = mediaDetails.genres.map((genre) => genre.name);
   const userRatingPercentage = Math.round(mediaDetails.vote_average * 10);
 
-  let progressClass = "progress-0";
-  if (userRatingPercentage >= 25) progressClass = "progress-25";
-  if (userRatingPercentage >= 50) progressClass = "progress-50";
-  if (userRatingPercentage >= 75) progressClass = "progress-75";
-  if (userRatingPercentage === 100) progressClass = "progress-100";
-
   const handlePlayClick = (videoKey) => {
     setTrailerUrl(`https://www.youtube.com/embed/${videoKey}`);
     setShowTrailer(true);
@@ -71,7 +63,7 @@ const MediaDetailsHeader = () => {
         className="backdrop"
         style={{
           backgroundImage: `url(https://image.tmdb.org/t/p/original${mediaDetails.backdrop_path})`,
-          backgroundSize: 'cover',
+          backgroundSize: "cover",
         }}
       />
       <div className="poster">
@@ -146,30 +138,45 @@ const MediaDetailsHeader = () => {
           </div>
         </div>
         <div>
-          <p className="tagline">{mediaDetails.tagline}</p>
+          {mediaDetails.tagline && (
+            <p className="tagline">{mediaDetails.tagline}</p>
+          )}
         </div>
         <div>
-          <h4>Synopsis :</h4>
-          <p className="synopsis">{mediaDetails.overview}</p>
-        </div>
+  <h4>Synopsis :</h4>
+  <p className="synopsis">
+    {showFullSynopsis ? mediaDetails.overview : `${mediaDetails.overview.slice(0, 200)}...`}
+  </p>
+  {!showFullSynopsis ? (
+    <button className="synopsis-button" onClick={() => setShowFullSynopsis(true)}>Voir plus</button>
+  ) : (
+    <div>
+      <AiFillCloseCircle className="close-button-synopsis" onClick={() => setShowFullSynopsis(false)}/>
+    </div>
+  )}
+</div>
 
-        <div>
-          <h4>Réalisateur :</h4>
-          {isMoviePage
-            ? mediaDetails.credits &&
-              mediaDetails.credits.crew && (
-                <p>
-                  {mediaDetails.credits.crew
-                    .filter((crew) => crew.job === "Executive Producer")
-                    .map((crew) => crew.name)
-                    .join(", ")}
-                </p>
-              )
-            : mediaDetails.created_by &&
-              mediaDetails.created_by.length > 0 && (
-                <p>{mediaDetails.created_by[0].name}</p>
-              )}
-        </div>
+{showFullSynopsis ? null : (
+    <div>
+      <h4>Réalisateur :</h4>
+      {isMoviePage
+        ? mediaDetails.credits &&
+          mediaDetails.credits.crew && (
+            <p>
+              {mediaDetails.credits.crew
+                .filter((crew) => crew.job === "Executive Producer")
+                .slice(0, 3) // Limite aux 3 premiers réalisateurs
+                .map((crew) => crew.name)
+                .join(", ")}
+            </p>
+          )
+        : mediaDetails.created_by &&
+          mediaDetails.created_by.length > 0 && (
+            <p>{mediaDetails.created_by[0].name}</p>
+          )}
+    </div>
+  )}
+
       </div>
       {showTrailer && (
         <div className="overlay">

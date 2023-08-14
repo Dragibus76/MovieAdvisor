@@ -167,17 +167,17 @@ const fetchNowPlayingTvShow = (page) => {
 };
 
 // FETCH TV SHOW DETAILS
-const fetchTvShowDetails = (mediaType, id) => {
-  const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: config.Authorization,
-    },
-  };
+// const fetchTvShowDetails = (mediaType, id) => {
+//   const options = {
+//     method: 'GET',
+//     headers: {
+//       accept: 'application/json',
+//       Authorization: config.Authorization,
+//     },
+//   };
 
-  return fetchMovieData(`${config.Base_Url}/tv/${id}?${config.lang}`, options);
-};
+//   return fetchMovieData(`${config.Base_Url}/tv/${id}?${config.lang}`, options);
+// };
 
 // TV SEARCH
 const TvSearch = ( page, query ) => {
@@ -203,7 +203,7 @@ export {
   fetchPopularTvShow,
   fetchUpcomingTvShow,
   fetchNowPlayingTvShow,
-  fetchTvShowDetails,
+  // fetchTvShowDetails,
   TvSearch,
   fetchCredits,
   fetchVideos
