@@ -1,0 +1,182 @@
+/* MediaDetailsPage.css */
+.media-details-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.backdrop {
+  width: 100%;
+  height: 550px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.backdrop::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 200, 200, 0.5); /* Fond gris clair avec opacité */
+}
+
+.poster {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 300px; /* Ajustez la taille du poster selon vos besoins */
+  z-index: 1;
+}
+
+.poster img {
+  width: 100%;
+}
+
+.info {
+  position: absolute;
+  top: 20px;
+  left: 350px; /* Marge du poster plus 20px */
+  z-index: 1;
+}
+
+.info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.release-year {
+  font-weight: 500;
+  font-size: 80%;
+  margin-left: 5px;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.genres {
+  margin-top: 10px;
+}
+
+.genre {
+  display: inline-block;
+  color: black;
+  font-weight: 500;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  border: 2px solid #720e9e;
+  font-size: 14px;
+}
+
+.duration {
+  font-weight: 500;
+  font-size: 100%;
+  margin-left: 10px;
+}
+
+.dot-icon {
+  vertical-align: middle;
+  margin: 0; /* Ajustez la marge selon vos besoins */
+  font-size: 1.3rem;
+}
+
+.user-rating {
+  display: flex; /* Utilisez flexbox pour aligner les éléments sur la même ligne */
+  align-items: center; /* Aligner les éléments verticalement au centre */
+  margin-top: 10px;
+}
+
+
+.icons {
+  display: flex;
+  align-items: center; /* Aligner les icônes verticalement au centre */
+  margin: 10px;
+}
+
+.icon-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.icon-heart, .icon-play {
+  color: #062441;
+  cursor: pointer;
+}
+.icon-heart {
+  font-size: 14px;
+}
+.icon-play {
+  font-size: 20px;
+}
+.progress-circle {
+  display: flex;
+  align-items: center; /* Aligner les éléments verticalement au centre */
+  margin-right: 10px;
+}
+
+.tagline {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.spinner {
+  font-size: 3rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Ajoutez ces styles dans votre fichier CSS */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.trailer-iframe {
+  width: 90%;
+  max-width: 800px;
+  height: 500px;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}

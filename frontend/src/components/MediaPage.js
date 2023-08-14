@@ -64,7 +64,7 @@ const MediaPage = ({ fetchData, mediaType, searchFunction }) => {
         ))}
       </div>
       <SearchBar onSearch={(results, totalResults) => handleSearchResult(results, totalResults)} searchFunction={searchFunction} />
-      {mediaData && <MediaList mediaItems={mediaData} />}
+      {mediaData && <MediaList mediaItems={mediaData} mediaType={mediaType}/>}
       <Pagination currentPage={currentPage} totalPages={Math.ceil(totalMedia / mediaPerPage)} onPageChange={handlePageChange} />
     </div>
   );

@@ -1,14 +1,10 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React from "react";
+import MediaDetailsHeader from "../components/MediaDetailsHeader";
 
 const MediaDetailsPage = () => {
-  const { id } = useParams();
-
-
   return (
-    <div>
-  
-      <h2>Détails du média ID: {id}</h2>
+    <div className="media-details-container">
+      <MediaDetailsHeader/>
     </div>
   );
 };

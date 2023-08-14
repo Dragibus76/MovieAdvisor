@@ -61,6 +61,46 @@ const fetchMovieNowPlaying = (page) => {
   return fetchMovieData(`${config.Base_Url}/movie/now_playing?${config.lang}&page=${page}`, options);
 };
 
+// FETCH MOVIE DETAILS
+const fetchMediaDetails = (mediaType, id) => {
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: config.Authorization,
+    },
+  };
+
+  return fetchMovieData(`${config.Base_Url}/${mediaType}/${id}?${config.lang}`, options);
+};
+
+// FETCH CREDITS FOR MOVIE OR TV SHOW
+const fetchCredits = (mediaType, id) => {
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: config.Authorization,
+    },
+  };
+
+  return fetchMovieData(`${config.Base_Url}/${mediaType}/${id}/credits?${config.lang}`, options);
+};
+
+// FETCH VIDEOS FOR MOVIE OR TV SHOW
+const fetchVideos = (mediaType, id) => {
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: config.Authorization,
+    },
+  };
+
+  return fetchMovieData(`${config.Base_Url}/${mediaType}/${id}/videos?${config.lang}`, options);
+};
+
+
 // MOVIE SEARCH
 const MovieSearch = ( page, query ) => {
   const options = {
@@ -126,6 +166,19 @@ const fetchNowPlayingTvShow = (page) => {
   return fetchMovieData(`${config.Base_Url}/tv/airing_today?${config.lang}&page=${page}`, options);
 };
 
+// FETCH TV SHOW DETAILS
+const fetchTvShowDetails = (mediaType, id) => {
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: config.Authorization,
+    },
+  };
+
+  return fetchMovieData(`${config.Base_Url}/tv/${id}?${config.lang}`, options);
+};
+
 // TV SEARCH
 const TvSearch = ( page, query ) => {
   const options = {
@@ -144,10 +197,14 @@ export {
   fetchMovieTopRated,
   fetchMovieUpcoming,
   fetchMovieNowPlaying,
+  fetchMediaDetails,
   MovieSearch,
   fetchTopRatedTvShow,
   fetchPopularTvShow,
   fetchUpcomingTvShow,
   fetchNowPlayingTvShow,
-  TvSearch
+  fetchTvShowDetails,
+  TvSearch,
+  fetchCredits,
+  fetchVideos
 };
