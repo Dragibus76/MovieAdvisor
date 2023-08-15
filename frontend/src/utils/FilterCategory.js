@@ -1,4 +1,4 @@
-import { fetchMoviePopular, fetchMovieTopRated, fetchMovieUpcoming, fetchMovieNowPlaying,fetchPopularTvShow, fetchTopRatedTvShow, fetchUpcomingTvShow, fetchNowPlayingTvShow } from '../api/ApiCalls';
+import { fetchMoviePopular, fetchMovieTopRated, fetchMovieUpcoming, fetchMediaNowPlaying,fetchPopularTvShow, fetchTopRatedTvShow, fetchUpcomingTvShow, fetchNowPlayingTvShow } from '../api/ApiCalls';
 
 export const getFetchFunction = (activeButton) => {
   switch (activeButton) {
@@ -9,7 +9,7 @@ export const getFetchFunction = (activeButton) => {
     case 'MovieUpcoming':
       return fetchMovieUpcoming;
     case 'MovieNowPlaying':
-      return fetchMovieNowPlaying;
+      return fetchMediaNowPlaying;
     case 'TvPopular':
       return fetchPopularTvShow;
     case 'TvTopRated':

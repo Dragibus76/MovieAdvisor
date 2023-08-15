@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchMediaDetails, fetchCredits, fetchVideos } from "../api/ApiCalls";
 import { BsDot, BsHeartFill, BsPlayFill } from "react-icons/bs";
 import { FaSpinner } from "react-icons/fa";
-import { AiFillCloseCircle } from 'react-icons/ai'
+import { AiFillCloseCircle } from "react-icons/ai";
 import CustomCircularProgressbar from "../components/CustomCircularProgressbar";
 import dateFormater from "../utils/dateFormater";
 import "react-circular-progressbar/dist/styles.css";
@@ -17,9 +17,8 @@ const MediaDetailsHeader = () => {
   const [trailerUrl, setTrailerUrl] = useState("");
   const [showFullSynopsis, setShowFullSynopsis] = useState(false);
 
-
   useEffect(() => {
-    const fetchDetails = isMoviePage ? fetchMediaDetails : fetchMediaDetails; // Utilisez fetchMediaDetails pour les deux cas
+    const fetchDetails = isMoviePage ? fetchMediaDetails : fetchMediaDetails;
     const fetchCreditDetails = fetchCredits;
 
     Promise.all([
@@ -143,40 +142,49 @@ const MediaDetailsHeader = () => {
           )}
         </div>
         <div>
-  <h4>Synopsis :</h4>
-  <p className="synopsis">
-    {showFullSynopsis ? mediaDetails.overview : `${mediaDetails.overview.slice(0, 200)}...`}
-  </p>
-  {!showFullSynopsis ? (
-    <button className="synopsis-button" onClick={() => setShowFullSynopsis(true)}>Voir plus</button>
-  ) : (
-    <div>
-      <AiFillCloseCircle className="close-button-synopsis" onClick={() => setShowFullSynopsis(false)}/>
-    </div>
-  )}
-</div>
-
-{showFullSynopsis ? null : (
-    <div>
-      <h4>Réalisateur :</h4>
-      {isMoviePage
-        ? mediaDetails.credits &&
-          mediaDetails.credits.crew && (
-            <p>
-              {mediaDetails.credits.crew
-                .filter((crew) => crew.job === "Executive Producer")
-                .slice(0, 3) // Limite aux 3 premiers réalisateurs
-                .map((crew) => crew.name)
-                .join(", ")}
-            </p>
-          )
-        : mediaDetails.created_by &&
-          mediaDetails.created_by.length > 0 && (
-            <p>{mediaDetails.created_by[0].name}</p>
+          <h4>Synopsis :</h4>
+          <p className="synopsis">
+            {showFullSynopsis
+              ? mediaDetails.overview
+              : `${mediaDetails.overview.slice(0, 200)}...`}
+          </p>
+          {!showFullSynopsis ? (
+            <button
+              className="synopsis-button"
+              onClick={() => setShowFullSynopsis(true)}
+            >
+              Voir plus
+            </button>
+          ) : (
+            <div>
+              <AiFillCloseCircle
+                className="close-button-synopsis"
+                onClick={() => setShowFullSynopsis(false)}
+              />
+            </div>
           )}
-    </div>
-  )}
+        </div>
 
+        {showFullSynopsis ? null : (
+          <div>
+            <h4>Réalisateur :</h4>
+            {isMoviePage
+              ? mediaDetails.credits &&
+                mediaDetails.credits.crew && (
+                  <p>
+                    {mediaDetails.credits.crew
+                      .filter((crew) => crew.job === "Executive Producer")
+                      .slice(0, 3)
+                      .map((crew) => crew.name)
+                      .join(", ")}
+                  </p>
+                )
+              : mediaDetails.created_by &&
+                mediaDetails.created_by.length > 0 && (
+                  <p>{mediaDetails.created_by[0].name}</p>
+                )}
+          </div>
+        )}
       </div>
       {showTrailer && (
         <div className="overlay">

@@ -1,0 +1,18 @@
+.MediaCastContainer {
+  margin: 20px;
+}
+
+.cast-carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  width: 95%;
+  padding: 10px;
+}
+
+.show-more-icon {
+  font-size: 30px;
+  margin-top: 11vh;
+  
+}

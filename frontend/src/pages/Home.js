@@ -1,6 +1,6 @@
 import React from 'react';
 import CarouselComponent from '../components/CarouselComponent';
-import { fetchMovieNowPlaying } from '../api/ApiCalls';
+import { fetchMediaNowPlaying } from '../api/ApiCalls';
 import '../styles/pages/Home.css';
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
         <h1>Bienvenue sur MovieAdvisor</h1>
         <p>Car ça n'a jamais été aussi simple d'avoir un avis sur un film ou une série !</p>
       </div>
-      <CarouselComponent fetchData={fetchMovieNowPlaying} />
+      <CarouselComponent fetchData={(page) => fetchMediaNowPlaying('movie', page)} />
 
     </div>
   );

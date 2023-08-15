@@ -4,7 +4,6 @@ import Pagination from '../components/PaginationComponent';
 import { getFetchFunction } from '../utils/FilterCategory';
 import CustomButtonCategory from '../components/CustomButtonCategory';
 import SearchBar from '../components/SearchBar';
-import CarouselComponent from '../components/CarouselComponent';
 import '../styles/components/MediaPage.css';
 
 const MediaPage = ({ fetchData, mediaType, searchFunction }) => {
@@ -52,7 +51,6 @@ const MediaPage = ({ fetchData, mediaType, searchFunction }) => {
 
   return (
     <div>
-      <CarouselComponent fetchData={fetchData} />
       <div className='MediaContainer'>
         {buttonInfo.map(button => (
           <CustomButtonCategory

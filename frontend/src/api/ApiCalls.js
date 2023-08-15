@@ -49,7 +49,8 @@ const fetchMovieUpcoming = (page) => {
 };
 
 // FETCH MOVIE NOW PLAYING
-const fetchMovieNowPlaying = (page) => {
+const fetchMediaNowPlaying = (mediaType, page) => {
+  const endpoint = mediaType === 'movie' ? 'now_playing' : 'airing_today';
   const options = {
     method: 'GET',
     headers: {
@@ -58,7 +59,7 @@ const fetchMovieNowPlaying = (page) => {
     },
   };
 
-  return fetchMovieData(`${config.Base_Url}/movie/now_playing?${config.lang}&page=${page}`, options);
+  return fetchMovieData(`${config.Base_Url}/${mediaType}/${endpoint}?${config.lang}&page=${page}`, options);
 };
 
 // FETCH MOVIE DETAILS
@@ -166,19 +167,6 @@ const fetchNowPlayingTvShow = (page) => {
   return fetchMovieData(`${config.Base_Url}/tv/airing_today?${config.lang}&page=${page}`, options);
 };
 
-// FETCH TV SHOW DETAILS
-// const fetchTvShowDetails = (mediaType, id) => {
-//   const options = {
-//     method: 'GET',
-//     headers: {
-//       accept: 'application/json',
-//       Authorization: config.Authorization,
-//     },
-//   };
-
-//   return fetchMovieData(`${config.Base_Url}/tv/${id}?${config.lang}`, options);
-// };
-
 // TV SEARCH
 const TvSearch = ( page, query ) => {
   const options = {
@@ -196,7 +184,7 @@ export {
   fetchMoviePopular,
   fetchMovieTopRated,
   fetchMovieUpcoming,
-  fetchMovieNowPlaying,
+  fetchMediaNowPlaying,
   fetchMediaDetails,
   MovieSearch,
   fetchTopRatedTvShow,
