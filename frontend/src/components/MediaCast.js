@@ -32,7 +32,7 @@ const MediaCast = ({ mediaType, mediaId }) => {
 
   return (
     <div className='MediaCastContainer'>
-      <h1>Acteurs</h1>
+      <h4>Acteurs :</h4>
       <div className="cast-carousel">
         {cast && (showAllCards ? cast : cast.slice(0, displayedCards)).map((actor) => (
           <CastCard key={actor.id} actor={actor} />

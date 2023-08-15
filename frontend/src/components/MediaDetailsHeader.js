@@ -5,7 +5,7 @@ import { BsDot, BsHeartFill, BsPlayFill } from "react-icons/bs";
 import { FaSpinner } from "react-icons/fa";
 import { AiFillCloseCircle } from "react-icons/ai";
 import CustomCircularProgressbar from "../components/CustomCircularProgressbar";
-import dateFormater from "../utils/dateFormater";
+import { dateFormater } from "../utils/dataFormater";
 import "react-circular-progressbar/dist/styles.css";
 import "../styles/components/MediaDetailsHeader.css";
 

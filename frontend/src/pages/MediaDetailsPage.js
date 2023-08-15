@@ -16,9 +16,11 @@ const MediaDetailsPage = () => {
         <div className="media-details-content">
           <div className="media-cast">
             <MediaCast mediaType={mediaType} mediaId={id} />
+           
           </div>
+          
           <div className="media-infos">
-            <MediaInfos />
+          <MediaInfos mediaType={mediaType} mediaId={id} />
           </div>
         </div>
       </div>
